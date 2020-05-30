@@ -1,0 +1,38 @@
+<div class="credito-content">
+    <h1 class="titulo">Créditos</h1>
+
+    <div class="saldo">
+        <div class="valor">
+            <h3>Saldo</h3>
+            <span>{{ this.banco.getSaldo() }}</span>
+        </div>
+        <button class="btn"  (click)="this.banco.descontar()">Descontar</button>
+    </div>
+    
+    <div>
+        <h1 class="titulo">Operações</h1>
+        <div class="operacoes">
+            <div>
+                <h2>Depósito</h2>
+                <div>
+                    <div>
+                        <button class="btn" (click)="this.banco.depositar(1)">1</button>
+                        <button class="btn" (click)="this.banco.depositar(10)">10</button>
+                        <button class="btn" (click)="this.banco.depositar(100)">100</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2>Saque</h2>
+                <div>
+                    <div>
+                        <button class="btn" (click)="this.banco.sacar(1)">1</button>
+                        <button class="btn" (click)="this.banco.sacar(10)">10</button>
+                        <button class="btn" (click)="this.banco.sacar(100)">100</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

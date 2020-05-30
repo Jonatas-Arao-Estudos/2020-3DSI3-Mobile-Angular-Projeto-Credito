@@ -1,0 +1,67 @@
+@import 'colors.scss';
+.credito-content{
+    background-color: color("blue-grey", "lighten-3");
+    width: 30vw;
+    padding: 50px 0;
+    border-radius: 50px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+.titulo{
+    text-align: center;
+    margin: 0;
+}
+
+.saldo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .valor{
+        text-align: center;
+        h3{
+            margin: 0;
+        }
+        span{
+            background-color: color("blue-grey","lighten-5"); 
+            padding: 0 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            font-size: 15px;
+        }
+    }
+}
+
+.operacoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.saldo, .operacoes{
+    padding: 20px 0;
+}
+
+.btn{
+    background-color: color("blue-grey","darken-2"); 
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    color: color("blue-grey","lighten-5");
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    outline: none;
+    &:hover{
+        background-color: color("blue-grey","darken-3");
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    &:focus{
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .credito-content{
+        width: 80vw;
+    }
+}

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { BancoService } from '../../services';
+
 @Component({
   selector: 'app-credito',
   templateUrl: './credito.component.html',
@@ -7,12 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private banco : BancoService) { }
 
-  private valorSaldo : number;
-  
   ngOnInit() {
-    this.valorSaldo = 10;
+    this.banco.setSaldoInicial(10);
   }
 
 }
